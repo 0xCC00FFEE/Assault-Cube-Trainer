@@ -12,4 +12,7 @@ The currently supported features of the trainer include:
 
 The project also dissects the player's entity data structure, which helps understanding more about RCE, pointers and memory.
 
+Please note that this is an external hack, which means all the features were implemented in a DLL file that should be injected into the game's process in order to be able to activate the available cheats. You can find the compiled DLL inside the DllProject/ directory of the current repository. 
+You can use my Dll injector, or any other injector of choice to inject the DLL into the game's process.
+
 ---------------------------------------------------------------
