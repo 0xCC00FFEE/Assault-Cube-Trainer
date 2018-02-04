@@ -1,7 +1,7 @@
 Static Address for Entities:
 ----------------------------
 Entity List: 0x0050F4F4
-Player's Entity: *0050F4F4
+Player's Entity: *0x0050F4F4
 Other Player's Entities: *(0x0050F4F4+0x04)
 Entities Distance: 0 Bytes
 Allies starting from *(*(0x0050F4F4+0x04)+0x04)
@@ -11,61 +11,61 @@ Number_of_Players			= 0x0050F500
 ###########################################
 Player's Entity: [[00509B74]]
 --------------
-X_Coordinate_Translated 	= PlayerEnt+0x04
-Y_Coordinate_Translated 	= PlayerEnt+0x08
-Z_Coordinate_Translated 	= PlayerEnt+0x0C
-X_Coordinate				= PlayerEnt+0x34
-Y_Coordinate 				= PlayerEnt+0x38
-Z_Coordinate 				= PlayerEnt+0x3C
-Mouse_Yaw					= PlayerEnt+0x40
-Mouse_Pitch 				= PlayerEnt+0x44
-Gravity 					= PlayerEnt+0x54
-Crouch 						= PlayerEnt+0x5C
-Jump 						= PlayerEnt+0x6B
-IsCrouching 				= PlayerEnt+0x6C
-IsPlayerStopped 			= PlayerEnt+0x70
-MoveControlA				= PlayerEnt+0x80
-MoveControlB				= PlayerEnt+0x8C
-Health 						= PlayerEnt+0xF8
-Body_Armor 					= PlayerEnt+0xFC
-Double_Pistol_Enable		= PlayerEnt+0x10C
-Pistol_Ammo_Bags 			= PlayerEnt+0x114
-Carbine_Ammo_Bags			= PlayerEnt+0x118
-Combat_Shotgun_Ammo_Bags	= PlayerEnt+0x11C
-Submachine_Gun_Ammo_Bags	= PlayerEnt+0x120
-Sniper_Rifle_Ammo_Bags 		= PlayerEnt+0x124
-Assault_Rifle_Ammo_Bags 	= PlayerEnt+0x128
-DoublePistol_Ammo_Bags 		= PlayerEnt+0x134
-Pistol_Ammo 				= PlayerEnt+0x13C
-Carbine_Ammo 				= PlayerEnt+0x140
-Combat_Shotgun_Ammo 		= PlayerEnt+0x144
-Submachine_Gun_Ammo 		= PlayerEnt+0x148
-Sniper_Rifle_Ammo 			= PlayerEnt+0x14C
-Assault_Rifle_Ammo 			= PlayerEnt+0x150
-Grenades 					= PlayerEnt+0x158
-DoublePistolAmmo 			= PlayerEnt+0x15C
-KnifeDelay 					= PlayerEnt+0x160
-PistolShoot&ReloadDelay 	= PlayerEnt+0x164
-CarbineShoot&ReloadDelay   	= PlayerEnt+0x168
-ShotgunShoot&ReloadDelay 	= PlayerEnt+0x16C
-SubShoot&ReloadDelay 		= PlayerEnt+0x170
-SniperShoot&ReloadDelay 	= PlayerEnt+0x174
-AssaultShoot&ReloadDelay 	= PlayerEnt+0x178
-GrenadesDelay 				= PlayerEnt+0x180
-2PistolsShoot&ReloadDelay 	= PlayerEnt+0x184
-HowManyKnifeUsed? 			= PlayerEnt+0x188
-HowManyPistolUsed? 			= PlayerEnt+0x18C
-HowManyCarbineUsed? 		= PlayerEnt+0x190
-HowManyShotgunUsed? 		= PlayerEnt+0x194
-HowManySubUsed? 			= PlayerEnt+0x198
-HowManySniperUsed? 			= PlayerEnt+0x19C
-HowManyAssaultUsed? 		= PlayerEnt+0x1A0
-HowManyGrenadesUsed?		= PlayerEnt+0x1A8
-HowMany2PistolsUsed? 		= PlayerEnt+0x1AC
-Shoot 						= PlayerEnt+0x224
-PlayerName 					= PlayerEnt+0x225
-TeamNumber 					= PlayerEnt+0x32C
-IsDead? 					= PlayerEnt+0x338
+X_Coordinate_Translated = PlayerEnt+0x04
+Y_Coordinate_Translated = PlayerEnt+0x08
+Z_Coordinate_Translated = PlayerEnt+0x0C
+X_Coordinate = PlayerEnt+0x34
+Y_Coordinate = PlayerEnt+0x38
+Z_Coordinate = PlayerEnt+0x3C
+Mouse_Yaw = PlayerEnt+0x40
+Mouse_Pitch = PlayerEnt+0x44
+Gravity = PlayerEnt+0x54
+Crouch = PlayerEnt+0x5C
+Jump = PlayerEnt+0x6B
+IsCrouching = PlayerEnt+0x6C
+IsPlayerStopped = PlayerEnt+0x70
+MoveControlA = PlayerEnt+0x80
+MoveControlB = PlayerEnt+0x8C
+Health = PlayerEnt+0xF8
+Body_Armor = PlayerEnt+0xFC
+Double_Pistol_Enable = PlayerEnt+0x10C
+Pistol_Ammo_Bags = PlayerEnt+0x114
+Carbine_Ammo_Bags = PlayerEnt+0x118
+Combat_Shotgun_Ammo_Bags = PlayerEnt+0x11C
+Submachine_Gun_Ammo_Bags = PlayerEnt+0x120
+Sniper_Rifle_Ammo_Bags = PlayerEnt+0x124
+Assault_Rifle_Ammo_Bags = PlayerEnt+0x128
+DoublePistol_Ammo_Bags = PlayerEnt+0x134
+Pistol_Ammo = PlayerEnt+0x13C
+Carbine_Ammo = PlayerEnt+0x140
+Combat_Shotgun_Ammo = PlayerEnt+0x144
+Submachine_Gun_Ammo = PlayerEnt+0x148
+Sniper_Rifle_Ammo = PlayerEnt+0x14C
+Assault_Rifle_Ammo = PlayerEnt+0x150
+Grenades = PlayerEnt+0x158
+DoublePistolAmmo = PlayerEnt+0x15C
+KnifeDelay = PlayerEnt+0x160
+PistolShoot&ReloadDelay = PlayerEnt+0x164
+CarbineShoot&ReloadDelay = PlayerEnt+0x168
+ShotgunShoot&ReloadDelay = PlayerEnt+0x16C
+SubShoot&ReloadDelay = PlayerEnt+0x170
+SniperShoot&ReloadDelay = PlayerEnt+0x174
+AssaultShoot&ReloadDelay = PlayerEnt+0x178
+GrenadesDelay = PlayerEnt+0x180
+2PistolsShoot&ReloadDelay = PlayerEnt+0x184
+HowManyKnifeUsed? = PlayerEnt+0x188
+HowManyPistolUsed? = PlayerEnt+0x18C
+HowManyCarbineUsed? = PlayerEnt+0x190
+HowManyShotgunUsed? = PlayerEnt+0x194
+HowManySubUsed? = PlayerEnt+0x198
+HowManySniperUsed? = PlayerEnt+0x19C
+HowManyAssaultUsed? = PlayerEnt+0x1A0
+HowManyGrenadesUsed? = PlayerEnt+0x1A8
+HowMany2PistolsUsed? = PlayerEnt+0x1AC
+Shoot = PlayerEnt+0x224
+PlayerName = PlayerEnt+0x225
+TeamNumber = PlayerEnt+0x32C
+IsDead? = PlayerEnt+0x338
 
 ###########################################
 No push back while shooting:
