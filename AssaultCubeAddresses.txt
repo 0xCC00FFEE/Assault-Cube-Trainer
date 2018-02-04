@@ -1,0 +1,143 @@
+Static Address for Entities:
+----------------------------
+Entity List: 0x0050F4F4
+Player's Entity: *0050F4F4
+Other Player's Entities: *(0x0050F4F4+0x04)
+Entities Distance: 0 Bytes
+Allies starting from *(*(0x0050F4F4+0x04)+0x04)
+
+Number_of_Players			= 0x0050F500
+
+###########################################
+Player's Entity: [[00509B74]]
+--------------
+X_Coordinate_Translated 	= PlayerEnt+0x04
+Y_Coordinate_Translated 	= PlayerEnt+0x08
+Z_Coordinate_Translated 	= PlayerEnt+0x0C
+X_Coordinate				= PlayerEnt+0x34
+Y_Coordinate 				= PlayerEnt+0x38
+Z_Coordinate 				= PlayerEnt+0x3C
+Mouse_Yaw					= PlayerEnt+0x40
+Mouse_Pitch 				= PlayerEnt+0x44
+Gravity 					= PlayerEnt+0x54
+Crouch 						= PlayerEnt+0x5C
+Jump 						= PlayerEnt+0x6B
+IsCrouching 				= PlayerEnt+0x6C
+IsPlayerStopped 			= PlayerEnt+0x70
+MoveControlA				= PlayerEnt+0x80
+MoveControlB				= PlayerEnt+0x8C
+Health 						= PlayerEnt+0xF8
+Body_Armor 					= PlayerEnt+0xFC
+Double_Pistol_Enable		= PlayerEnt+0x10C
+Pistol_Ammo_Bags 			= PlayerEnt+0x114
+Carbine_Ammo_Bags			= PlayerEnt+0x118
+Combat_Shotgun_Ammo_Bags	= PlayerEnt+0x11C
+Submachine_Gun_Ammo_Bags	= PlayerEnt+0x120
+Sniper_Rifle_Ammo_Bags 		= PlayerEnt+0x124
+Assault_Rifle_Ammo_Bags 	= PlayerEnt+0x128
+DoublePistol_Ammo_Bags 		= PlayerEnt+0x134
+Pistol_Ammo 				= PlayerEnt+0x13C
+Carbine_Ammo 				= PlayerEnt+0x140
+Combat_Shotgun_Ammo 		= PlayerEnt+0x144
+Submachine_Gun_Ammo 		= PlayerEnt+0x148
+Sniper_Rifle_Ammo 			= PlayerEnt+0x14C
+Assault_Rifle_Ammo 			= PlayerEnt+0x150
+Grenades 					= PlayerEnt+0x158
+DoublePistolAmmo 			= PlayerEnt+0x15C
+KnifeDelay 					= PlayerEnt+0x160
+PistolShoot&ReloadDelay 	= PlayerEnt+0x164
+CarbineShoot&ReloadDelay   	= PlayerEnt+0x168
+ShotgunShoot&ReloadDelay 	= PlayerEnt+0x16C
+SubShoot&ReloadDelay 		= PlayerEnt+0x170
+SniperShoot&ReloadDelay 	= PlayerEnt+0x174
+AssaultShoot&ReloadDelay 	= PlayerEnt+0x178
+GrenadesDelay 				= PlayerEnt+0x180
+2PistolsShoot&ReloadDelay 	= PlayerEnt+0x184
+HowManyKnifeUsed? 			= PlayerEnt+0x188
+HowManyPistolUsed? 			= PlayerEnt+0x18C
+HowManyCarbineUsed? 		= PlayerEnt+0x190
+HowManyShotgunUsed? 		= PlayerEnt+0x194
+HowManySubUsed? 			= PlayerEnt+0x198
+HowManySniperUsed? 			= PlayerEnt+0x19C
+HowManyAssaultUsed? 		= PlayerEnt+0x1A0
+HowManyGrenadesUsed?		= PlayerEnt+0x1A8
+HowMany2PistolsUsed? 		= PlayerEnt+0x1AC
+Shoot 						= PlayerEnt+0x224
+PlayerName 					= PlayerEnt+0x225
+TeamNumber 					= PlayerEnt+0x32C
+IsDead? 					= PlayerEnt+0x338
+
+###########################################
+No push back while shooting:
+----------------------------
+Default OPCODES:
+00463781    8B16                MOV EDX,DWORD PTR DS:[ESI]
+00463783    8B52 14             MOV EDX,DWORD PTR DS:[EDX+14]
+00463786    50                  PUSH EAX
+00463787    8D4C24 1C           LEA ECX,DWORD PTR SS:[ESP+1C]
+0046378B    51                  PUSH ECX
+0046378C    8BCE                MOV ECX,ESI
+0046378E    FFD2                CALL EDX
+
+Hack:
+Start NOP'ing at address 00463781, 15 bytes
+
+############################################
+Fast Fire:  
+----------
+Default OPCODES:             
+0046367F    E8 1CBFFFFF         CALL ac_clien.0045F5A0
+
+Hack: Nop'ed
+
+############################################
+Automatic Fire:
+---------------
+Default OPCODES: 
+00463716   75 09               JNZ SHORT ac_clien.00463721
+
+Hack:
+00463716   EB 09           	   JMP SHORT ac_clien.00463721
+
+############################################
+Ammo Increase:
+--------------
+DEFAULT OPCODES:
+004637E9    FF0E                DEC DWORD PTR DS:[ESI]
+
+Hack:
+004637E9   FF06             INC DWORD PTR DS:[ESI]
+Or 
+NOP'ed
+
+############################################
+Inifinite Health: 
+-----------------
+Note: Need to check whether it's the player's entity that's decreasing or other players.
+Default OPCODES:
+
+00429D1F    29 7B 04       sub    [ebx+04], edi
+
+For suiciding:
+
+
+00426C60    81EC 34040000   SUB ESP,434
+0042CC36    E8 25A0FFFF     CALL ac_clien.00426C60
+0042CC3E    E9 F0140000     JMP ac_clien.0042E133
+
+
+############################################
+Screen text display function:
+-----------------------------
+00426DCC    68 CC404E00   PUSH ac_clien.004E40CC
+00426DD1    FFD2          CALL EDX
+
+EDX = 004090F0
+Parameters = 2 (strings)
+return type = void
+Calling Convention = __cdecl
+
+############################################
+
+
+
