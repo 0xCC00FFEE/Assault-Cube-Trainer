@@ -75,7 +75,7 @@ void WriteToMemory(DWORD memAddr, BYTE* val, int valSize)
 
 	VirtualProtect((LPVOID)memAddr, valSize, PAGE_READWRITE, &oldProtection);
 	memcpy((LPVOID)memAddr, val, valSize);
-	VirtualProtect((LPVOID)memAddr, valSize, oldProtection, NULL);
+	VirtualProtect((LPVOID)memAddr, valSize, oldProtection, &oldProtection);
 }
 
 DWORD WINAPI OnInject(void* params)
